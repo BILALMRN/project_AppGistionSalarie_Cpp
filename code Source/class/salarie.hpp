@@ -28,36 +28,20 @@ public:
 		cin >> this->valSalarie;
 	}
 	// afichage
-	void afficheInformationSalarie(vector<salarie>& ob, int i)  {
-		int id,j;
-		cout << "Entrez le id du salarie : ";
-		cin >> id;
-		for (j = 0; j <= i; j++) {
-			if (ob[j].getId() == id) {
-				cout << "id : " << id << endl;
-				cout << "nom : " << nomDeSalarie << endl;
-				cout << "pre : " << prenomDeSalarie << endl;
-				cout << "sal : " << valSalarie << endl;
-				break;
-			}
-		
-		}
+	void afficheInformationSalarie()  {	
+		cout << "id : " << id << endl;
+		cout << "nom : " << nomDeSalarie << endl;
+		cout << "pre : " << prenomDeSalarie << endl;
+		cout << "sal : " << valSalarie << endl;
 	}
-	void modifierInformationSalarie(vector<salarie>& ob, int i) {
-		int id, j;
-		cout << "Entrez le id du salarie : ";
-		cin >> id;
-		for (j = 0; j <= i; j++) {
-			if (ob[j].getId() == id) {
-				cout << "Nouveau nom : ";
-				cin >> this->nomDeSalarie;
-				cout << "Nouveau prenom : ";
-				cin >> this->prenomDeSalarie;
-				cout << "Nouveau salaire : ";
-				cin >> this->valSalarie;
-				break;
-			}
-		}
+	void modifierInformationSalarie() {
+		cout << "Nouveau nom : ";
+		cin >> this->nomDeSalarie;
+		cout << "Nouveau prenom : ";
+		cin >> this->prenomDeSalarie;
+		cout << "Nouveau salaire : ";
+		cin >> this->valSalarie;
+				
 	}
 	//**des fonction
 	void piementDesSalaires() {
