@@ -46,7 +46,7 @@ int main() {
 			cin>>id;
 			for(k = 0; k<i;k++){
 				if(ob[k].getid()==id){
-				ob[i].modifierInformationSalarie();
+				ob[k].modifierInformationSalarie();
 				break;
 				}
 			}
