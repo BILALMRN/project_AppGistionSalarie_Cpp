@@ -26,11 +26,20 @@ int main() {
 			i++;
 			break;
 		case 2 :
-			ob[0].afficheInformationSalarie();
+			for(k = 0; k<i;k++)
+			ob[k].afficheInformationSalarie();
+			
 			break;
 		case 3:
-		for(k = 0; k<i;k++)
-			ob[k].afficheInformationSalarie();
+			cout<<"Entrez le id du salarie :";
+			cin>>id;
+			for(k = 0; k<i;k++){
+				if(ob[k].getid()==id){
+				ob[k].afficheInformationSalarie();
+				break;
+				}
+			}
+			
 			break;
 		case 4:
 			cout<<"Entrez le id du salarie :";
