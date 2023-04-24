@@ -63,7 +63,7 @@ public:
 	void piementDesSalaires() {
 
 	}
-	void rechercheUnSalarie(vector <salarie> &ob, int& i) {
+	void rechercheUnSalarie(const vector<salarie>& ob, int i) const {
 	
 		int id,j;
 		cout << "Entrez le id du salarie : ";
