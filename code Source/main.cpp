@@ -26,14 +26,14 @@ int main() {
 			i++;
 			break;
 		case 2 :
-			ob[0].afficheInformationSalarie();
+			ob[0].afficheInformationSalarie(ob,i);
 			break;
 		case 3:
 		for(k = 0; k<i;k++)
-			ob[k].afficheInformationSalarie();
+			ob[k].afficheInformationSalarie(ob,i);
 			break;
 		case 4:
-			ob[i].modifierInformationSalarie();
+			ob[i].modifierInformationSalarie(ob,i);
 			break;
 		case 5:
 			ob[i].piementDesSalaires();
