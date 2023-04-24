@@ -28,7 +28,7 @@ public:
 		cin >> this->valSalarie;
 	}
 	// afichage
-	void afficheInformationSalarie(vector <salarie> &ob, int& i) {
+	void afficheInformationSalarie(const vector<salarie>& ob, int i) const {
 		int id,j;
 		cout << "Entrez le id du salarie : ";
 		cin >> id;
@@ -43,7 +43,7 @@ public:
 		
 		}
 	}
-	void modifierInformationSalarie(vector <salarie> &ob, int& i) {
+	void modifierInformationSalarie(vector<salarie>& ob, int i) {
 		int id, j;
 		cout << "Entrez le id du salarie : ";
 		cin >> id;
