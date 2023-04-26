@@ -34,7 +34,7 @@ int main() {
 			cout<<"Entrez le id du salarie :";
 			cin>>id;
 			for(k = 0; k<i;k++){
-				if(ob[k].getid()==id){
+				if(ob[k].getId()==id){
 				ob[k].afficheInformationSalarie();
 				break;
 				}
@@ -45,7 +45,7 @@ int main() {
 			cout<<"Entrez le id du salarie :";
 			cin>>id;
 			for(k = 0; k<i;k++){
-				if(ob[k].getid()==id){
+				if(ob[k].getId()==id){
 				ob[k].modifierInformationSalarie();
 				break;
 				}
