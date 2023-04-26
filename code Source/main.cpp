@@ -28,7 +28,7 @@ int main() {
 		case 2 :
 			for(k = 0; k<i;k++)
 			ob[k].afficheInformationSalarie();
-			
+
 			break;
 		case 3:
 			cout<<"Entrez le id du salarie :";
@@ -39,7 +39,7 @@ int main() {
 				break;
 				}
 			}
-			
+
 			break;
 		case 4:
 			cout<<"Entrez le id du salarie :";
@@ -59,8 +59,8 @@ int main() {
 			cout << "saisir id de votre salarie : ";
 			cin >> id ;
 			removeUnSalarie(ob,i,id);
-			
-		}else 
+
+		}else
 		     cout << "\ntable de salarie est vide\n";
 		break;
 		case 7:
@@ -73,7 +73,7 @@ int main() {
 		}
     cout << "\nclick 0 to continue : ";
 	cin >> t;
-	if (t == 0){	exit(1);  }
+	if (t != 0){	exit(1);  }
 	} while (true);
 	return 0;
 }
