@@ -5,7 +5,7 @@
 
 using namespace std;
 int main() {
-	int choix,i=0,k,id;
+	int choix,t,i=0,k,id;
 	vector <salarie> ob;
 	cout << "\t --Ce programme pour Gistion de Salarie --\n";
 	do {
@@ -55,11 +55,14 @@ int main() {
 			ob[i].piementDesSalaires();
 			break;
 		case 6:
+		if (i >0 ){
 			cout << "saisir id de votre salarie : ";
 			cin >> id ;
 			removeUnSalarie(ob,i,id);
-			i-=1;
-			break;
+			
+		}else 
+		     cout << "\ntable de salarie est vide\n";
+		break;
 		case 7:
 			//exit est une foncion predefini dans c++
 			exit(1);
@@ -68,7 +71,9 @@ int main() {
 		default:
 			cout << "votre choix n'exist pas";
 		}
-
+    cout << "\nclick 0 to continue : ";
+	cin >> t;
+	if (t == 0){	exit(1);  }
 	} while (true);
 	return 0;
 }

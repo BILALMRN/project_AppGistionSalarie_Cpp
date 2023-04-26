@@ -70,14 +70,22 @@ salarie foctionSalarie() {
 	return temp;
 }
 void removeUnSalarie(vector <salarie> &ob, int& i, int id) {
-	int position;
+	int position=-1;
 	for (int j = 0; j <= i; j++) {
 		if (ob[j].getId() == id)
 			position = j;
 	}
-	for (int j = position; j<i; j++) {
-		ob[j] = ob[j + 1];
+
+	if (position==0){
+		i-=1;
 	}
+	else if (position>0){
+		for (int j = position; j<i; j++) {
+		ob[j] = ob[j + 1];
+		}
+		i-=1;
+	}else 
+		cout << "l id n exist pas\n";	
 }
 
 #endif // INCLUDED
