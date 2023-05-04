@@ -5,11 +5,11 @@
 
 using namespace std;
 int main() {
-	int choix,t,i=0,k,id;
+	int choix,t,k,id;
 	vector <salarie> ob;
 	cout << "\t --Ce programme pour Gistion de Salarie --\n";
 	do {
-		cout << "1 - add Un Salarie : " << endl;
+		cout << "\n1 - add Un Salarie : " << endl;
 		cout << "2 - affiche les Informations des Salaries - " << endl;
 		cout << "3 - affiche les Informations de Salaries - "<< endl;
 		cout << "4 - modifier les Information de Salarie - " << endl;
@@ -23,17 +23,16 @@ int main() {
 		switch (choix) {
 		case 1:
 			ob.push_back(foctionSalarie());//pour add un valeur in table de ob
-			i++;
 			break;
 		case 2 :
-			for(k = 0; k<i;k++)
+			for(k = 0; k<ob.size();k++)
 			ob[k].afficheInformationSalarie();
 
 			break;
 		case 3:
 			cout<<"Entrez le id du salarie :";
 			cin>>id;
-			for(k = 0; k<i;k++){
+			for(k = 0; k<ob.size();k++){
 				if(ob[k].getId()==id){
 				ob[k].afficheInformationSalarie();
 				break;
@@ -44,7 +43,7 @@ int main() {
 		case 4:
 			cout<<"Entrez le id du salarie :";
 			cin>>id;
-			for(k = 0; k<i;k++){
+			for(k = 0; k<ob.size();k++){
 				if(ob[k].getId()==id){
 				ob[k].modifierInformationSalarie();
 				break;
@@ -52,13 +51,13 @@ int main() {
 			}
 			break;
 		case 5:
-			ob[i].piementDesSalaires();
+			ob[0].piementDesSalaires();
 			break;
 		case 6:
-		if (i >0 ){
+		if (ob.size() >0 ){
 			cout << "saisir id de votre salarie : ";
 			cin >> id ;
-			removeUnSalarie(ob,i,id);
+			removeUnSalarie(ob,id);
 
 		}else
 		     cout << "\ntable de salarie est vide\n";
