@@ -51,7 +51,9 @@ int main() {
 			}
 			break;
 		case 5:
-			ob[0].piementDesSalaires();
+        for (k= 0; k < ob.size(); k++) {
+			ob[k].AddPiementdessalaires();
+		}
 			break;
 		case 6:
 		if (ob.size() >0 ){
@@ -70,9 +72,7 @@ int main() {
 		default:
 			cout << "votre choix n'exist pas";
 		}
-    cout << "\nclick 0 to continue : ";
-	cin >> t;
-	if (t != 0){	exit(1);  }
+    
 	} while (true);
 	return 0;
 }

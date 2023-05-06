@@ -13,7 +13,9 @@ class salarie
 	char nomDeSalarie[20];
 	char prenomDeSalarie[20];
 	double valSalarie;
+    vector<string> LastSalary_payments;
 public:
+
 	int getId() {
 		return id;
 	};
@@ -33,6 +35,7 @@ public:
 		cout << "nom : " << nomDeSalarie << endl;
 		cout << "pre : " << prenomDeSalarie << endl;
 		cout << "sal : " << valSalarie << endl;
+		affichPiementdessalaires();
 	}
 	void modifierInformationSalarie() {
 		cout << "Nouveau nom : ";
@@ -44,19 +47,26 @@ public:
 				
 	}
 	//**des fonction
-	vector<string> date;
-       vector<string> salary_payments;
-       void piementdessalaires() {
-       cout << " saisir votre choix ";cin >> tempDate;
-        for (k= 0; k < i; k++) {
-         cout << " saisir votre choix ";cin >> tempChoix;
-        if (tempChoix == 'Y') {
-            salary_payments.push_back(to_string(ob[k].getValsalarie())+"$");
-        } else {
-            salary_payments.push_back("non paid");
+	
+       void AddPiementdessalaires() {
+            LastSalary_payments.push_back(to_string(valSalarie)+"$");
+			cout << "---- IS ADD ----"<< endl;
+			}
+void affichPiementdessalaires() {
+	   /*for(auto i : date)
+        cout << "DATE DE payment : " << i << "\t\t";*/
+		if(LastSalary_payments.size()==0){
+cout<< "\t\t n'exit pas LastSalary payments "  << endl;
+		}
+		else {
+			for(auto i : LastSalary_payments)
+		cout<< "\t\t LastSalary payments : "  << i << endl;
+		}
+
+		cout << "\n\n";
+            
         }
-    }
-}
+
 	void rechercheUnSalarie( vector<salarie>& ob, int i)  {
 	
 		int id,j;
