@@ -44,9 +44,19 @@ public:
 				
 	}
 	//**des fonction
-	void piementDesSalaires() {
-
-	}
+	vector<string> date;
+       vector<string> salary_payments;
+       void piementdessalaires() {
+       cout << " saisir votre choix ";cin >> tempDate;
+        for (k= 0; k < i; k++) {
+         cout << " saisir votre choix ";cin >> tempChoix;
+        if (tempChoix == 'Y') {
+            salary_payments.push_back(to_string(ob[k].getValsalarie())+"$");
+        } else {
+            salary_payments.push_back("non paid");
+        }
+    }
+}
 	void rechercheUnSalarie( vector<salarie>& ob, int i)  {
 	
 		int id,j;
