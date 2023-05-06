@@ -29,6 +29,18 @@ public:
 		cout << "Entrez le salaire du salarie : ";
 		cin >> this->valSalarie;
 	}
+        void afficheInformationSalarie(vector <salarie> &ob, int& i) {
+		int k;
+		for (k = 0; k <= i; k++) {
+				cout << "id est  " << ob[k].id << endl;
+				cout << "nom est  " <<ob[k]. nomDeSalarie << endl;
+				cout << "prenom est " <<ob[k]. prenomDeSalarie << endl;
+				cout << "salarie est   " << ob[k].valSalarie << endl;
+	
+		
+		}
+	}
+
 	// afichage
 	void afficheInformationSalarie()  {	
 		cout << "id : " << id << endl;
